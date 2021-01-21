@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+File "C:\ProgramData\Anaconda3\Scripts\spyder-script.py", line 10, in 
+sys.exit(main())
+File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\start.py", line 214, in main
+mainwindow.main(options, args)
+File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 3630, in main
+mainwindow = create_window(app, splash, options, args)
+File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 3488, in create_window
+main.setup()
+File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 888, in setup
+from spyder.plugins.ipythonconsole.plugin import IPythonConsole
+File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\plugins\ipythonconsole\plugin.py", line 24, in 
+from jupyter_client.connect import find_connection_file
+File "C:\ProgramData\Anaconda3\lib\site-packages\jupyter_client\__init__.py", line 4, in 
+from .connect import *
+File "C:\ProgramData\Anaconda3\lib\site-packages\jupyter_client\connect.py", line 35, in 
+from jupyter_core.paths import jupyter_data_dir, jupyter_runtime_dir, secure_write
+ImportError: cannot import name 'secure_write' from 'jupyter_core.paths' (C:\ProgramData\Anaconda3\lib\site-packages\jupyter_core\paths.py)
