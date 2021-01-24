@@ -1,18 +1,36 @@
-Traceback (most recent call last):
-File "C:\ProgramData\Anaconda3\Scripts\spyder-script.py", line 10, in 
-sys.exit(main())
-File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\start.py", line 214, in main
-mainwindow.main(options, args)
-File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 3630, in main
-mainwindow = create_window(app, splash, options, args)
-File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 3488, in create_window
-main.setup()
-File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\app\mainwindow.py", line 888, in setup
-from spyder.plugins.ipythonconsole.plugin import IPythonConsole
-File "C:\ProgramData\Anaconda3\lib\site-packages\spyder\plugins\ipythonconsole\plugin.py", line 24, in 
-from jupyter_client.connect import find_connection_file
-File "C:\ProgramData\Anaconda3\lib\site-packages\jupyter_client\__init__.py", line 4, in 
-from .connect import *
-File "C:\ProgramData\Anaconda3\lib\site-packages\jupyter_client\connect.py", line 35, in 
-from jupyter_core.paths import jupyter_data_dir, jupyter_runtime_dir, secure_write
-ImportError: cannot import name 'secure_write' from 'jupyter_core.paths' (C:\ProgramData\Anaconda3\lib\site-packages\jupyter_core\paths.py)
+/*
+ * Updated to C++, zedwood.com 2012
+ * Based on Olivier Gay's version
+ * See Modified BSD License below: 
+ *
+ * FIPS 180-2 SHA-224/256/384/512 implementation
+ * Issue date:  04/30/2005
+ * http://www.ouah.org/ogay/sha2/
+ *
+ * Copyright (C) 2005, 2007 Olivier Gay <olivier.gay@a3.epfl.ch>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the project nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
