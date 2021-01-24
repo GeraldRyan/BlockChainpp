@@ -24,8 +24,6 @@ class SHA256 {
    uint32 m_h[8]; 
 };
 
-// so we declared a class
-
 std::string sha256(std::string input); // just a function declaration
 
 // Bitwise operations
