@@ -18,6 +18,6 @@ private:
   string _sData;
   string _sHash;
   time_t _tTime;
-  string _CalculateHash() const;
+  string _CalculateHash() const; //https://en.cppreference.com/w/cpp/language/member_functions#const-_and_volatile-qualified_member_functions
 
 };
