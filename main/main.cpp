@@ -18,6 +18,6 @@ int main(int argc, char* argv[]) {
     auto duration = duration_cast<microseconds>(stop - start);
 
     cout << "sha256('" << input << "'):" << output1 << endl;
-    cout << "Duration: " << duration.count() << endl;
+    cout << "Duration: " << duration.count() << " (milliseconds)" << el;
     return 0;
 }

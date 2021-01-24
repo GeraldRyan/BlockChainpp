@@ -18,7 +18,7 @@ class SHA256 {
 
    protected: // why would there be a protected section? All child classes have access to data and functions
    void transform(const unsigned char *message, unsigned int block_nb); // ?? Not sure block_nb. Have to pay attention to this
-   unsigned int m_total_len;
+   unsigned int m_tot_len;
    unsigned int m_len;
    unsigned char m_block[2*SHA224_256_BLOCK_SIZE]; //
    uint32 m_h[8]; 
@@ -29,15 +29,15 @@ class SHA256 {
 std::string sha256(std::string input); // just a function declaration
 
 // Bitwise operations
-#define SHA2SHFR(x, n) (x >> n)  // shift right n digits
+#define SHA2_SHFR(x, n) (x >> n)  // shift right n digits
 #define SHA2_ROTR(x, n) (( x >> n) | (x << ((sizeof(x) << 3) - n ))) // | = bitwise inclusive OR 
 #define SHA2_ROTL(x, n) ((x << n) | (x >> ((sizeof(x) << 3) - n ))) // sizeof(x) <<< 3 is supposed to rep word width in bits per spec. 
-#define SHA2_CH(x, y, z) ((x & t) ^ (~x & z )) // bitwise AND (&). ^(BItwise XOR) ~Bitwise NOT (one's complement unary) 
-#define SHA2_MAJ (x, y, z) ((x & y ) ^ (x & z) ^ (y & z))
+#define SHA2_CH(x, y, z) ((x & y) ^ (~x & z )) // bitwise AND (&). ^(BItwise XOR) ~Bitwise NOT (one's complement unary) 
+#define SHA2_MAJ(x, y, z) ((x & y ) ^ (x & z) ^ (y & z))
 #define SHA256_F1(x) (SHA2_ROTR(x, 2) ^ SHA2_ROTR(x, 13) ^ SHA2_ROTR(x,22))
 #define SHA256_F2(x) (SHA2_ROTR(x, 6) ^ SHA2_ROTR(x, 11) ^ SHA2_ROTR(x,25))
-#define SHA256_F3(x) (SHA2_ROTR(x, 2) ^ SHA2_ROTR(x, 13) ^ SHA2_SHFR(x,22))
-#define SHA256_F4(x) (SHA2_ROTR(x, 2) ^ SHA2_ROTR(x, 13) ^ SHA2_SHFR(x,22))
+#define SHA256_F3(x) (SHA2_ROTR(x, 7) ^ SHA2_ROTR(x, 18) ^ SHA2_SHFR(x,3))
+#define SHA256_F4(x) (SHA2_ROTR(x, 17) ^ SHA2_ROTR(x, 19) ^ SHA2_SHFR(x,10))
 #define SHA2_UNPACK32(x, str)                 \
 {                                             \
     *((str) + 3) = (uint8) ((x)      );       \
