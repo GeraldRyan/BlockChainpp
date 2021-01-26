@@ -10,7 +10,7 @@ public:
   string sPrevHash;
   Block(uint32_t nIndexIn, const string &sDataIn); // class constructor. const plus reference means don't copy but still don't change. improve efficiency
   string GetHash();
-  void MineBlock(uint32_t);
+  void MineBlock(uint32_t nDifficulty);
 
 private:
   uint32_t _nIndex;
