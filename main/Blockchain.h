@@ -12,6 +12,6 @@ public:
 
 private:
   uint32_t _nDifficulty;
-  vector<Block> _vChain;
+  vector<Block> _vChain; // dependency is above
   Block _GetLastBlock() const; // barred from changing. Like a peek method
 };
